@@ -184,14 +184,29 @@ export function GalleryGrid() {
 
 export function GalleryBeforeAfter() {
   return (
-    <div className="mx-auto mt-24 grid max-w-[1100px] items-center gap-12 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
-      <div className="flex flex-col items-start gap-6">
+    <div className="mx-auto mt-24 grid max-w-[1100px] items-start gap-12 px-6 md:px-10 lg:grid-cols-2 lg:items-center lg:gap-20">
+      <div className="flex flex-col items-start gap-6 lg:hidden">
         <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep">
           Avant / Après
         </p>
         <h2 className="font-display text-[clamp(2rem,4.4vw,3.4rem)] font-medium leading-[1.05] text-noir">
           La main qui révèle
         </h2>
+      </div>
+      <BeforeAfter
+        before={AVANT_APRES.before}
+        after={AVANT_APRES.after}
+        className="shadow-[0_50px_120px_-40px_rgba(196,168,130,0.55)] lg:order-2"
+      />
+      <div className="flex flex-col items-start gap-6 lg:order-1">
+        <div className="hidden lg:block">
+          <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep">
+            Avant / Après
+          </p>
+          <h2 className="mt-6 font-display text-[clamp(2rem,4.4vw,3.4rem)] font-medium leading-[1.05] text-noir">
+            La main qui révèle
+          </h2>
+        </div>
         <p className="max-w-md font-serif text-lg italic leading-relaxed text-mist">
           Faites glisser le voile doré : le même visage, la même femme — simplement
           révélée par le geste Maison Lumière.
@@ -204,11 +219,6 @@ export function GalleryBeforeAfter() {
           </Button>
         </Magnetic>
       </div>
-      <BeforeAfter
-        before={AVANT_APRES.before}
-        after={AVANT_APRES.after}
-        className="shadow-[0_50px_120px_-40px_rgba(196,168,130,0.55)]"
-      />
     </div>
   );
 }

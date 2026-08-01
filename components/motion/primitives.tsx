@@ -35,7 +35,7 @@ export function WordReveal({
   delay = 0,
   stagger = 0.035,
   once = true,
-  amount = 0.15,
+  amount = 0,
 }: {
   text: string;
   className?: string;
@@ -45,17 +45,19 @@ export function WordReveal({
   once?: boolean;
   amount?: number;
 }) {
+  const ref = React.useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once, amount });
   const words = text.split(" ");
+  const TagElement = Tag as React.ElementType;
   return (
-    <Tag className={cn("inline", className)}>
+    <TagElement ref={ref} className={cn("inline", className)}>
       {words.map((word, i) => (
         <React.Fragment key={i}>
           <span className="inline-block overflow-hidden align-bottom pb-[0.09em] -mb-[0.09em]">
             <motion.span
               className="inline-block will-change-transform"
               initial={{ y: "115%", rotate: 3 }}
-              whileInView={{ y: "0%", rotate: 0 }}
-              viewport={{ once, amount, margin: "-60px" }}
+              animate={inView ? { y: "0%", rotate: 0 } : undefined}
               transition={{ duration: 0.9, delay: delay + i * stagger, ease: EASE }}
             >
               {word}
@@ -64,7 +66,7 @@ export function WordReveal({
           {i < words.length - 1 ? " " : null}
         </React.Fragment>
       ))}
-    </Tag>
+    </TagElement>
   );
 }
 
@@ -79,7 +81,7 @@ export function Reveal({
   y = 36,
   blur = false,
   once = true,
-  amount = 0.1,
+  amount = 0,
   ...props
 }: HTMLMotionProps<"div"> & {
   delay?: number;
@@ -88,12 +90,14 @@ export function Reveal({
   once?: boolean;
   amount?: number;
 }) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once, amount });
   return (
     <motion.div
+      ref={ref}
       className={className}
       initial={{ opacity: 0, y, filter: blur ? "blur(12px)" : "blur(0px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once, amount, margin: "-40px" }}
+      animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : undefined}
       transition={{ duration: 0.95, delay, ease: EASE }}
       {...props}
     >
@@ -420,7 +424,7 @@ export function Counter({
   duration?: number;
 }) {
   const ref = React.useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.6 });
+  const inView = useInView(ref, { once: true, amount: 0 });
   const reduce = useReducedMotionSafe();
   const [display, setDisplay] = React.useState(reduce ? value : 0);
 

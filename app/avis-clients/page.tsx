@@ -2,7 +2,10 @@ import Link from "next/link";
 
 import { PageHero } from "@/components/blocks/page-hero";
 import { CtaBand } from "@/components/blocks/cta-band";
-import { RatingBreakdown, ReviewsGrid } from "@/components/blocks/reviews";
+import {
+  RatingBreakdown,
+  ReviewsCarousel,
+} from "@/components/blocks/reviews";
 import { Magnetic, Reveal, WordReveal } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
 import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
@@ -62,7 +65,7 @@ export default function AvisPage() {
           </div>
 
           <div className="mt-12">
-            <ReviewsGrid columns="md:grid-cols-2 lg:grid-cols-3" />
+            <ReviewsCarousel />
           </div>
 
           <Reveal className="mt-16 text-center">

@@ -1,4 +1,5 @@
 import { HomeHero } from "@/components/home/hero";
+import { ServicesShowcase } from "@/components/home/services-showcase";
 import {
   ArtistsBand,
   MarqueeBand,
@@ -26,6 +27,7 @@ export default function HomePage() {
       <MarqueeBand />
       <Histoire />
       <Philosophie />
+      <ServicesShowcase />
       <ArtistsBand items={ARTISTS.slice(0, 3)} />
       <PrestationsList />
       <GalerieStrip />

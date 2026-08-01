@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { ReviewsCarousel } from "@/components/blocks/reviews";
 import {
   ArchImage,
   BeforeAfter,
@@ -24,7 +25,6 @@ import {
   FAQS,
   GALLERY,
   INSTAGRAM_BAND,
-  REVIEWS,
   STATS,
 } from "@/lib/data";
 
@@ -37,7 +37,15 @@ export function Histoire() {
     <section className="relative overflow-hidden bg-cream py-24 md:py-36">
       <div className="pointer-events-none absolute -left-40 top-1/3 h-[420px] w-[420px] rounded-full border border-gold/15" />
 
-      <div className="relative mx-auto grid max-w-[1440px] items-center gap-16 px-6 md:px-10 lg:grid-cols-2 lg:gap-24">
+      <div className="relative mx-auto grid max-w-[1440px] items-start gap-12 px-6 md:px-10 lg:grid-cols-2 lg:items-center lg:gap-24">
+        <div className="lg:hidden">
+          <SectionHeading
+            eyebrow="Notre histoire"
+            title="Une maison née d'une intuition"
+            lead="En 2013, Camille Fontaine ouvre un petit atelier rue de la Paix avec un credo simple : la beauté ne se fabrique pas, elle se révèle."
+          />
+        </div>
+
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <ArchImage
             src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&h=1500&auto=format&fit=crop"
@@ -55,11 +63,13 @@ export function Histoire() {
         </div>
 
         <div className="flex flex-col items-start gap-8">
-          <SectionHeading
-            eyebrow="Notre histoire"
-            title="Une maison née d'une intuition"
-            lead="En 2013, Camille Fontaine ouvre un petit atelier rue de la Paix avec un credo simple : la beauté ne se fabrique pas, elle se révèle."
-          />
+          <div className="hidden lg:block">
+            <SectionHeading
+              eyebrow="Notre histoire"
+              title="Une maison née d'une intuition"
+              lead="En 2013, Camille Fontaine ouvre un petit atelier rue de la Paix avec un credo simple : la beauté ne se fabrique pas, elle se révèle."
+            />
+          </div>
           <Reveal delay={0.1}>
             <p className="max-w-xl font-sans text-[15px] leading-relaxed text-mist">
               Douze années plus tard, Maison Lumière est devenue une adresse de
@@ -149,13 +159,29 @@ export function GalerieStrip() {
         ))}
       </FilmStrip>
 
-      <div className="mx-auto mt-20 grid max-w-[1440px] items-center gap-12 px-6 md:px-10 lg:grid-cols-2 lg:gap-20">
-        <div className="order-2 lg:order-1">
+      <div className="mx-auto mt-20 grid max-w-[1440px] items-start gap-12 px-6 md:px-10 lg:grid-cols-2 lg:items-center lg:gap-20">
+        <div className="lg:hidden">
           <SectionHeading
             eyebrow="Avant / Après"
             title="La différence Maison Lumière"
             lead="Un teint unifié, un regard dessiné, une lumière posée — le geste de nos artistes en une image."
           />
+        </div>
+        <Reveal delay={0.1} className="lg:order-2">
+          <BeforeAfter
+            before={AVANT_APRES.before}
+            after={AVANT_APRES.after}
+            className="mx-auto max-w-md shadow-[0_50px_120px_-40px_rgba(196,168,130,0.55)] lg:max-w-none"
+          />
+        </Reveal>
+        <div className="flex flex-col lg:order-1">
+          <div className="hidden lg:block">
+            <SectionHeading
+              eyebrow="Avant / Après"
+              title="La différence Maison Lumière"
+              lead="Un teint unifié, un regard dessiné, une lumière posée — le geste de nos artistes en une image."
+            />
+          </div>
           <Reveal delay={0.1} className="mt-8">
             <p className="max-w-md font-sans text-[15px] leading-relaxed text-mist">
               Deux images, une seule cliente. Le maquillage ne doit jamais
@@ -173,13 +199,6 @@ export function GalerieStrip() {
             </Magnetic>
           </Reveal>
         </div>
-        <Reveal delay={0.1} className="order-1 lg:order-2">
-          <BeforeAfter
-            before={AVANT_APRES.before}
-            after={AVANT_APRES.after}
-            className="mx-auto max-w-md shadow-[0_50px_120px_-40px_rgba(196,168,130,0.55)] lg:max-w-none"
-          />
-        </Reveal>
       </div>
     </section>
   );
@@ -234,7 +253,37 @@ export function InstagramBand() {
           @maisonlumiere
         </a>
       </div>
-      <div className="flex w-max animate-marquee" style={{ animationDuration: "60s" }}>
+
+      <div
+        className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-6 px-6 pb-4 md:mx-0 md:hidden"
+        style={{ scrollbarWidth: "none" }}
+      >
+        {INSTAGRAM_BAND.map((src, i) => (
+          <a
+            key={i}
+            href="https://instagram.com/maisonlumiere"
+            target="_blank"
+            rel="noreferrer"
+            className="group relative h-56 w-44 shrink-0 snap-center overflow-hidden rounded-3xl bg-powder"
+            aria-label="Voir sur Instagram"
+          >
+            <Image
+              src={src}
+              alt=""
+              fill
+              sizes="176px"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-noir/60 to-transparent p-3 pt-10">
+              <span className="font-sans text-[9px] uppercase tracking-[0.25em] text-cream">
+                @maisonlumiere
+              </span>
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <div className="hidden w-max animate-marquee md:flex" style={{ animationDuration: "60s" }}>
         {row()}
         {row(true)}
       </div>
@@ -247,39 +296,33 @@ export function InstagramBand() {
 /* ------------------------------------------------------------------ */
 
 export function AvisFeatured() {
-  const review = REVIEWS[0];
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(100%_90%_at_90%_10%,#E8DED4_0%,#F3E9E1_45%,#FAFAFA_100%)] py-24 md:py-36">
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_left,rgba(201,169,110,0.14),transparent_70%)]" />
 
-      <div className="relative mx-auto flex max-w-[1000px] flex-col items-center gap-10 px-6 text-center md:px-10">
-        <Reveal>
-          <div className="flex items-center gap-1" aria-label="5 étoiles sur 5">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i} className="text-xl text-gold" aria-hidden>
-                ★
-              </span>
-            ))}
-          </div>
+      <div className="relative mx-auto max-w-[1200px] px-6 md:px-10">
+        <div className="flex flex-col items-center gap-5 text-center">
+          <Reveal>
+            <div className="flex items-center gap-1" aria-label="4,9 étoiles sur 5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <span key={i} className="text-xl text-gold" aria-hidden>
+                  ★
+                </span>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <p className="font-sans text-[11px] uppercase tracking-[0.25em] text-mist">
+              Ils nous ont confié leur visage
+            </p>
+          </Reveal>
+        </div>
+
+        <Reveal delay={0.15} className="mt-12">
+          <ReviewsCarousel />
         </Reveal>
-        <Reveal delay={0.1}>
-          <figure className="flex flex-col gap-8">
-            <blockquote>
-              <p className="font-serif text-[clamp(1.5rem,3.4vw,2.6rem)] italic leading-[1.25] text-noir">
-                « {review.text} »
-              </p>
-            </blockquote>
-            <figcaption className="flex flex-col items-center gap-1">
-              <span className="font-display text-lg font-semibold text-noir">
-                {review.name}
-              </span>
-              <span className="font-sans text-[11px] uppercase tracking-[0.22em] text-mist">
-                {review.location} · {review.prestation}
-              </span>
-            </figcaption>
-          </figure>
-        </Reveal>
-        <Reveal delay={0.2}>
+
+        <Reveal delay={0.1} className="mt-12 text-center">
           <Magnetic>
             <Button asChild variant="outline" size="lg">
               <Link href="/avis-clients" data-cursor="Avis">

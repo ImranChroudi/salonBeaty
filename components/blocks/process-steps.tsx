@@ -61,28 +61,19 @@ export function ProcessSteps({
                 className="pointer-events-none absolute -left-2 top-6 font-display text-[clamp(4.5rem,10vw,8rem)] font-semibold leading-none text-noir/[0.05] select-none lg:left-0"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2, margin: "-40px" }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               >
                 {step.no}
               </motion.span>
 
-              <div className="flex flex-col gap-3 lg:col-span-5 lg:col-start-2 lg:pl-8">
-                <Reveal>
-                  <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep">
-                    {step.no} · {step.time ?? "Le rituel"}
-                  </p>
-                </Reveal>
-                <Reveal delay={0.05}>
-                  <h3 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-noir">
-                    {step.title}
-                  </h3>
-                </Reveal>
-                <Reveal delay={0.12}>
-                  <p className="max-w-md font-sans text-[15px] leading-relaxed text-mist">
-                    {step.text}
-                  </p>
-                </Reveal>
+              <div className="flex flex-col gap-3 lg:hidden">
+                <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep">
+                  {step.no} · {step.time ?? "Le rituel"}
+                </p>
+                <h3 className="font-display text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-noir">
+                  {step.title}
+                </h3>
               </div>
 
               {step.image && (
@@ -98,6 +89,26 @@ export function ProcessSteps({
                   </Reveal>
                 </div>
               )}
+
+              <div className="flex flex-col gap-3 lg:col-span-5 lg:col-start-2 lg:pl-8">
+                <div className="hidden lg:block">
+                  <Reveal>
+                    <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep">
+                      {step.no} · {step.time ?? "Le rituel"}
+                    </p>
+                  </Reveal>
+                  <Reveal delay={0.05}>
+                    <h3 className="mt-3 font-display text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-noir">
+                      {step.title}
+                    </h3>
+                  </Reveal>
+                </div>
+                <Reveal delay={0.12}>
+                  <p className="max-w-md font-sans text-[15px] leading-relaxed text-mist">
+                    {step.text}
+                  </p>
+                </Reveal>
+              </div>
             </div>
           ))}
         </div>

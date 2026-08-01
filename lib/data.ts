@@ -93,6 +93,152 @@ export type Artist = {
   index: string;
 };
 
+export type ShowcaseService = {
+  no: string;
+  name: string;
+  tagline: string;
+  description: string;
+  price: string;
+  duration: string;
+  features: string[];
+  before: string;
+  after: string;
+  alt: string;
+};
+
+export const SHOWCASE_SERVICES: ShowcaseService[] = [
+  {
+    no: "01",
+    name: "Soins du Visage",
+    tagline: "La peau, purifiée et lumineuse",
+    description:
+      "Un nettoyage en profondeur, une exfoliation douce et un masque aux actifs précieux. Votre peau respire, s'éclaircit et retrouve un éclat naturel immédiat.",
+    price: "à partir de 85 €",
+    duration: "60 min",
+    features: ["Nettoyage en profondeur", "Exfoliation douce", "Masque aux actifs précieux"],
+    before: img("photo-1610500796385-3ffc1ae2f046", 900, 1125),
+    after: img("photo-1616394584738-fc6e612e71b9", 900, 1125),
+    alt: "Soin du visage — avant et après",
+  },
+  {
+    no: "02",
+    name: "Maquillage",
+    tagline: "Un visage mis en lumière",
+    description:
+      "Un maquillage sur-mesure, du teint lumineux au regard travaillé. Notre artiste compose avec votre carnation et votre tenue pour un résultat qui dure toute la journée.",
+    price: "à partir de 95 €",
+    duration: "1 h 15",
+    features: ["Teint lumineux sur-mesure", "Regard ou couleurs affirmés", "Tenue longue durée"],
+    before: img("photo-1457972729786-0411a3b2b626", 900, 1125),
+    after: img("photo-1516975080664-ed2fc6a32937", 900, 1125),
+    alt: "Maquillage — avant et après",
+  },
+  {
+    no: "03",
+    name: "Extensions de Cils",
+    tagline: "Un regard ouvert, sans effort",
+    description:
+      "Des cils posés un à un, d'une finesse extrême. Un regard naturellement agrandi, sans mascara, qui se réveille déjà sublime chaque matin.",
+    price: "à partir de 75 €",
+    duration: "1 h 30",
+    features: ["Cils un à un en soie", "Volume naturel ou intense", "Pose minutieuse et confortable"],
+    before: img("photo-1583001931096-959e9a1a6223", 900, 1125),
+    after: img("photo-1526045478516-99145907023c", 900, 1125),
+    alt: "Extensions de cils — avant et après",
+  },
+  {
+    no: "04",
+    name: "Design de Sourcils",
+    tagline: "L'architecture du regard",
+    description:
+      "Un lissage et une redéfinition au design : la ligne du sourcil est redessinée au poil près pour encadrer votre regard et rééquilibrer votre visage.",
+    price: "à partir de 45 €",
+    duration: "30 min",
+    features: ["Analyse morphologique", "Lissage au design", "Mise en couleur douce"],
+    before: img("photo-1519368358672-25b03afee3bf", 900, 1125),
+    after: img("photo-1583939003579-730e3918a45a", 900, 1125),
+    alt: "Design de sourcils — avant et après",
+  },
+  {
+    no: "05",
+    name: "Coiffure",
+    tagline: "Une chevelure mise en scène",
+    description:
+      "Brushing, ondulations, chignon travaillé : votre coiffure est dessinée en harmonie avec votre visage, votre tenue et l'occasion.",
+    price: "à partir de 55 €",
+    duration: "1 h",
+    features: ["Brushing ou ondulations", "Chignons et tresses", "Coiffure d'occasion"],
+    before: img("photo-1519692933481-e162a57d6721", 900, 1125),
+    after: img("photo-1580618672591-eb180b1a973f", 900, 1125),
+    alt: "Coiffure — avant et après",
+  },
+  {
+    no: "06",
+    name: "Coloration",
+    tagline: "La nuance qui vous ressemble",
+    description:
+      "Balayage, ombré ou couleur totale : une nuance précise, choisie avec vous, qui illumine le teint et donne de la matière à la chevelure.",
+    price: "à partir de 90 €",
+    duration: "2 h",
+    features: ["Diagnostic de coloration", "Balayage ou couleur totale", "Soin de finition"],
+    before: img("photo-1522337360788-8b13dee7a37e", 900, 1125),
+    after: img("photo-1529139574466-a303027c1d8b", 900, 1125),
+    alt: "Coloration — avant et après",
+  },
+  {
+    no: "07",
+    name: "Soins Capillaires",
+    tagline: "Réparer et révéler",
+    description:
+      "Un protocole profond pour cheveux fatigués : masque aux huiles précieuses, céramides et massage du cuir chevelu. Douceur et brillance retrouvées.",
+    price: "à partir de 60 €",
+    duration: "1 h 15",
+    features: ["Diagnostic capillaire", "Masque réparateur", "Massage du cuir chevelu"],
+    before: img("photo-1560869713-7d0a29430803", 900, 1125),
+    after: img("photo-1605497788044-5a32c7078486", 900, 1125),
+    alt: "Soin capillaire — avant et après",
+  },
+  {
+    no: "08",
+    name: "Manucure",
+    tagline: "L'élégance au bout des doigts",
+    description:
+      "Limes, cuticules et vernis ou nail-art raffiné : des mains impeccables, un éclat discret qui complète chaque geste.",
+    price: "à partir de 35 €",
+    duration: "45 min",
+    features: ["Soin des mains complet", "Vernis ou gel tenue", "Finition nail-art possible"],
+    before: img("photo-1632345031435-8727f6897d53", 900, 1125),
+    after: img("photo-1610992015732-2449b76344bc", 900, 1125),
+    alt: "Manucure — avant et après",
+  },
+  {
+    no: "09",
+    name: "Maquillage Mariée",
+    tagline: "Le plus beau jour de votre vie",
+    description:
+      "Un essai complet puis un maquillage le jour J, pensé pour tenir douze heures et traverser les émotions sans faillir. Une peau de porcelaine, un regard éternel.",
+    price: "à partir de 290 €",
+    duration: "Essai + jour J",
+    features: ["Essai sur-mesure déduit", "Tenue 12 h garantie", "Harmonie avec la coiffure"],
+    before: img("photo-1556228720-195a672e8a03", 900, 1125),
+    after: img("photo-1465453869711-7e174808ace9", 900, 1125),
+    alt: "Maquillage mariée — avant et après",
+  },
+  {
+    no: "10",
+    name: "Soins de la Peau",
+    tagline: "Un rituel rien qu'à vous",
+    description:
+      "Hydratation profonde, luminosité et détente absolue : un protocole complet qui réveille la peau et apaise l'esprit, entre soin et méditation.",
+    price: "à partir de 70 €",
+    duration: "1 h",
+    features: ["Hydratation en profondeur", "Rituel éclat", "Détente et sérénité"],
+    before: img("photo-1515377905703-c4788e51af15", 900, 1125),
+    after: img("photo-1540555700478-4be289fbecef", 900, 1125),
+    alt: "Soin de la peau — avant et après",
+  },
+];
+
 export const ARTISTS: Artist[] = [
   {
     name: "Camille Fontaine",
@@ -529,7 +675,7 @@ export const PRO_PROCESS = [
 ];
 
 export const AVANT_APRES = {
-  before: img("photo-1591369822096-ffd140ec948f", 1400, 1750),
+  before: img("photo-1544005313-94ddf0286df2", 1400, 1750),
   after: img("photo-1529626455594-4ff0802cfb7e", 1400, 1750),
 };
 
@@ -542,6 +688,10 @@ export const INSTAGRAM_BAND = [
   img("photo-1519699047748-de8e457a634e", 500, 500),
   img("photo-1548142813-c348350df52b", 500, 500),
   img("photo-1529626455594-4ff0802cfb7e", 500, 500),
+  img("photo-1570172619644-dfd03ed5d881", 500, 500),
+  img("photo-1502323777036-f29e3972d82f", 500, 500),
+  img("photo-1511671782779-c97d3d27a1d4", 500, 500),
+  img("photo-1487412947147-5cebf100ffc2", 500, 500),
 ];
 
 export const STATS = [

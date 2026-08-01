@@ -60,29 +60,37 @@ export default function ProPage() {
           <div className="mt-14 flex flex-col gap-20">
             {PRO_UNIVERS.map((u, i) => (
               <Reveal key={u.no} delay={0.05}>
-                <div
-                  className={`grid items-center gap-10 md:gap-16 ${
-                    i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
-                  } md:grid-cols-2`}
-                >
-                  <div>
+                <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+                  <div className="md:hidden">
                     <p className="font-sans text-sm font-semibold tabular-nums tracking-[0.3em] text-gold-deep">
                       {u.no}
                     </p>
                     <h3 className="mt-3 font-display text-[clamp(1.7rem,3.2vw,2.6rem)] font-medium text-noir">
                       {u.title}
                     </h3>
-                    <p className="mt-4 max-w-md font-sans text-[15px] leading-relaxed text-mist">
-                      {u.text}
-                    </p>
                   </div>
                   <ArchImage
                     src={u.image}
                     alt={u.title}
                     ratio="aspect-[4/3]"
                     sizes="(min-width: 768px) 46vw, 90vw"
-                    className="shadow-[0_40px_100px_-40px_rgba(196,168,130,0.55)]"
+                    className={`shadow-[0_40px_100px_-40px_rgba(196,168,130,0.55)] ${
+                      i % 2 === 1 ? "md:order-1" : "md:order-2"
+                    }`}
                   />
+                  <div className={i % 2 === 1 ? "md:order-2" : "md:order-1"}>
+                    <div className="hidden md:block">
+                      <p className="font-sans text-sm font-semibold tabular-nums tracking-[0.3em] text-gold-deep">
+                        {u.no}
+                      </p>
+                      <h3 className="mt-3 font-display text-[clamp(1.7rem,3.2vw,2.6rem)] font-medium text-noir">
+                        {u.title}
+                      </h3>
+                    </div>
+                    <p className="mt-4 max-w-md font-sans text-[15px] leading-relaxed text-mist">
+                      {u.text}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             ))}

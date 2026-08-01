@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/blocks/page-hero";
 import { CtaBand } from "@/components/blocks/cta-band";
+import { MapSection } from "@/components/blocks/map-section";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Eyebrow, Reveal, WordReveal } from "@/components/motion/primitives";
 import { SITE } from "@/lib/site";
@@ -142,21 +143,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="relative bg-cream pb-24 md:pb-32">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-10">
-          <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-border shadow-[0_40px_100px_-50px_rgba(196,168,130,0.5)]">
-              <iframe
-                title="Localisation de Maison Lumière — 24 rue de la Paix, Paris"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=2.3262%2C48.8665%2C2.3362%2C48.8705&layer=mapnik&marker=48.8683%2C2.3312"
-                className="h-[420px] w-full border-0 grayscale-[35%]"
-                loading="lazy"
-              />
-              <div className="pointer-events-none absolute inset-3 rounded-2xl border border-gold/25" />
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <MapSection />
 
       <CtaBand
         title="Le plus simple, c'est de venir"

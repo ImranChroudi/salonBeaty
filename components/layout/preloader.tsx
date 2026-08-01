@@ -31,7 +31,7 @@ export function Preloader() {
       {visible && (
         <motion.div
           key="preloader"
-          className="fixed inset-0 z-[200] flex items-center justify-center overflow-hidden bg-[radial-gradient(120%_120%_at_50%_0%,#F8D7DA_0%,#F1C0C6_45%,#E8B4BC_100%)]"
+          className="fixed inset-0 z-[200] flex items-center justify-center overflow-hidden bg-[radial-gradient(120%_120%_at_50%_0%,#F3E9E1_0%,#E8DED4_45%,#E8DED4_100%)]"
           initial={{ y: 0 }}
           animate={{ y: 0 }}
           exit={{ y: "-100%" }}

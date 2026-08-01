@@ -5,7 +5,8 @@ import { CtaBand } from "@/components/blocks/cta-band";
 import { RatingBreakdown, ReviewsGrid } from "@/components/blocks/reviews";
 import { Magnetic, Reveal, WordReveal } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Avis Clients",

@@ -16,8 +16,8 @@ export function TarifCards() {
           className={cn(
             "group relative flex flex-col overflow-hidden rounded-3xl border p-8 transition-all duration-500",
             tarif.featured
-              ? "border-gold bg-gradient-to-b from-noir to-[#2A2426] text-cream shadow-[0_40px_90px_-30px_rgba(30,30,30,0.55)]"
-              : "border-border bg-white text-noir hover:border-gold/50 hover:shadow-[0_30px_70px_-35px_rgba(192,132,151,0.5)]"
+              ? "border-gold bg-gradient-to-b from-noir to-[#3A3230] text-cream shadow-[0_40px_90px_-30px_rgba(44,38,36,0.55)]"
+              : "border-border bg-white text-noir hover:border-gold/50 hover:shadow-[0_30px_70px_-35px_rgba(196,168,130,0.5)]"
           )}
           initial={{ opacity: 0, y: 48 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -10,13 +10,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-noir text-cream shadow-sm hover:bg-deeprose hover:text-white hover:shadow-[0_18px_40px_-18px_rgba(192,132,151,0.85)]",
+          "bg-noir text-cream shadow-sm hover:bg-deeprose hover:text-white hover:shadow-[0_18px_40px_-18px_rgba(196,168,130,0.85)]",
         gold:
-          "text-noir border border-gold bg-gradient-to-r from-gold/15 via-gold/5 to-gold/15 hover:from-gold hover:via-gold-soft hover:to-gold hover:text-noir hover:shadow-[0_18px_40px_-18px_rgba(212,175,55,0.9)]",
+          "text-noir border border-gold bg-gradient-to-r from-gold/15 via-gold/5 to-gold/15 hover:from-gold hover:via-gold-soft hover:to-gold hover:text-noir hover:shadow-[0_18px_40px_-18px_rgba(201,169,110,0.9)]",
         outline:
-          "border border-noir/20 text-noir hover:border-gold hover:text-gold-deep hover:shadow-[0_14px_34px_-20px_rgba(212,175,55,0.8)]",
+          "border border-noir/20 text-noir hover:border-gold hover:text-gold-deep hover:shadow-[0_14px_34px_-20px_rgba(201,169,110,0.8)]",
         ghost: "text-noir hover:bg-secondary/60 hover:text-deeprose",
-        rose: "bg-deeprose text-white hover:bg-primary/90 shadow-[0_18px_40px_-18px_rgba(192,132,151,0.8)]",
+        rose: "bg-deeprose text-white hover:bg-primary/90 shadow-[0_18px_40px_-18px_rgba(196,168,130,0.8)]",
         link: "text-deeprose underline-offset-4 hover:underline",
       },
       size: {

@@ -6,7 +6,8 @@ import { TarifCards } from "@/components/blocks/tarif-cards";
 import { PriceTable } from "@/components/blocks/pricing-table";
 import { Magnetic, Reveal } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Tarifs",
@@ -51,7 +52,7 @@ export default function TarifsPage() {
             </div>
 
             <div className="flex flex-col justify-between gap-10">
-              <div className="rounded-3xl border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F8D7DA_0%,#FAFAFA_60%)] p-8 md:p-10">
+              <div className="rounded-3xl border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F3E9E1_0%,#FAFAFA_60%)] p-8 md:p-10">
                 <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-deep">
                   Bon à savoir
                 </p>

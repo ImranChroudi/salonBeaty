@@ -17,7 +17,8 @@ import {
   MARIAGE_OPTIONS,
   MARIAGE_RITUELS,
 } from "@/lib/data";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Maquillage Mariée",
@@ -114,7 +115,7 @@ export default function MarieePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_50%_0%,#F8D7DA_0%,#FAFAFA_60%)] py-24 md:py-32">
+      <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_50%_0%,#F3E9E1_0%,#FAFAFA_60%)] py-24 md:py-32">
         <div className="mx-auto px-6 md:px-10">
           <div className="flex flex-col items-start gap-6">
             <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep">

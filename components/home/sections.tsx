@@ -134,7 +134,7 @@ export function ArtistsBand({
 }) {
   const cols = items.slice(0, 6);
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(110%_80%_at_15%_0%,#F8D7DA_0%,#FAFAFA_55%)] py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[radial-gradient(110%_80%_at_15%_0%,#F3E9E1_0%,#FAFAFA_55%)] py-24 md:py-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-10">
         <SectionHeading eyebrow={eyebrow} title={title} lead={lead} />
 
@@ -221,8 +221,8 @@ export function Philosophie({
 }) {
   return (
     <section className="relative overflow-hidden bg-noir py-28 text-cream md:py-40">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_80%_20%,rgba(212,175,55,0.1),transparent_70%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_50%_at_10%_90%,rgba(192,132,151,0.16),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_80%_20%,rgba(201,169,110,0.1),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_50%_at_10%_90%,rgba(196,168,130,0.16),transparent_70%)]" />
 
       <div className="relative mx-auto flex max-w-[1100px] flex-col items-start gap-10 px-6 md:px-10">
         <Eyebrow light>{eyebrow}</Eyebrow>

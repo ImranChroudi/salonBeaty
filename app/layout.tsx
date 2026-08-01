@@ -4,10 +4,12 @@ import { MotionConfig } from "framer-motion";
 
 import { Preloader } from "@/components/layout/preloader";
 import { CustomCursor } from "@/components/layout/custom-cursor";
+import { FloatingActions } from "@/components/layout/floating-actions";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SmoothScrollProvider } from "@/components/layout/smooth-scroll";
-import { JsonLd, schemaBeautySalon, schemaWebSite } from "@/lib/site";
+import { schemaBeautySalon, schemaWebSite } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 import "./globals.css";
 
@@ -31,6 +33,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maison-lumiere.fr"),
   title: {
     default: "Maison Lumière — Atelier de Maquillage & Beauté de Luxe à Paris",
     template: "%s — Maison Lumière",
@@ -58,6 +61,14 @@ export const metadata: Metadata = {
     title: "Maison Lumière — Beauté de Luxe à Paris",
     description:
       "Atelier de maquillage & beauté de luxe à Paris. Chaque détail est pensé pour sublimer votre élégance.",
+    images: [
+      {
+        url: "https://maison-lumiere.fr/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Maison Lumière — Beauté de Luxe à Paris",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -86,6 +97,7 @@ export default function RootLayout({
           <SmoothScrollProvider>
             <Preloader />
             <CustomCursor />
+            <FloatingActions />
             <SiteHeader />
             <a
               href="#main"

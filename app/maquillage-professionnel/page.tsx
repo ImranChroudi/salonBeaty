@@ -11,7 +11,8 @@ import {
 } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
 import { PRO_PROCESS, PRO_UNIVERS } from "@/lib/data";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Maquillage Professionnel",
@@ -80,7 +81,7 @@ export default function ProPage() {
                     alt={u.title}
                     ratio="aspect-[4/3]"
                     sizes="(min-width: 768px) 46vw, 90vw"
-                    className="shadow-[0_40px_100px_-40px_rgba(192,132,151,0.55)]"
+                    className="shadow-[0_40px_100px_-40px_rgba(196,168,130,0.55)]"
                   />
                 </div>
               </Reveal>

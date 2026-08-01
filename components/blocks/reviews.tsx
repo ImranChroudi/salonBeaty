@@ -36,7 +36,7 @@ export function ReviewsGrid({
       {items.map((review, i) => (
         <motion.article
           key={review.name + review.date}
-          className="group flex flex-col gap-5 rounded-3xl border border-border bg-white p-8 transition-all duration-500 hover:border-gold/50 hover:shadow-[0_30px_70px_-35px_rgba(192,132,151,0.5)]"
+          className="group flex flex-col gap-5 rounded-3xl border border-border bg-white p-8 transition-all duration-500 hover:border-gold/50 hover:shadow-[0_30px_70px_-35px_rgba(196,168,130,0.5)]"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}

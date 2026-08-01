@@ -157,6 +157,7 @@ export type Review = {
   rating: number;
   text: string;
   date: string;
+  photo: string;
 };
 
 export const REVIEWS: Review[] = [
@@ -167,6 +168,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     text: "Le matin de mon mariage, j'étais sereine. Camille a dessiné un maquillage si juste que je me suis reconnue — en mieux. Douze heures plus tard, il tenait encore. Ce fut le plus beau cadeau de la journée.",
     date: "Juin 2026",
+    photo: img("photo-1544005313-94ddf0286df2", 200, 200),
   },
   {
     name: "Mathilde Roux",
@@ -175,6 +177,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     text: "Je suis entrée en n'y connaissant rien, je suis ressortie avec des gestes de pro. Inès prend le temps, explique chaque chose. Depuis, mon make-up du matin est un rituel que j'aime.",
     date: "Mai 2026",
+    photo: img("photo-1494790108377-be9c29b29330", 200, 200),
   },
   {
     name: "Salomé Nguyen",
@@ -183,6 +186,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     text: "Pour les 40 ans de mon mari, un regard smoky profond et un teint de porcelaine. Sofia a su écouter ce que je n'avais pas su dire. J'ai reçu des compliments toute la soirée.",
     date: "Avril 2026",
+    photo: img("photo-1438761681033-6461ffad8d80", 200, 200),
   },
   {
     name: "Aïcha Benali",
@@ -191,6 +195,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     text: "Un shooting de campagne pour notre maison. Jade était d'une précision rare sous les lumières, la peau sur les photos était sublime sans retouche. Un vrai professionnalisme de studio.",
     date: "Mars 2026",
+    photo: img("photo-1531123897727-8f129e1688ce", 200, 200),
   },
   {
     name: "Louise Girard",
@@ -199,6 +204,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     text: "Une heure de pure douceur. Le lisse des sourcils est d'une justesse incroyable et l'ambiance de l'atelier est un cocon. J'en sors plus légère à chaque fois.",
     date: "Février 2026",
+    photo: img("photo-1517841905240-472988babdf9", 200, 200),
   },
   {
     name: "Élise Moreau",
@@ -207,6 +213,7 @@ export const REVIEWS: Review[] = [
     rating: 5,
     text: "Les images sont magnifiques, douces, exactement moi. Le duo maquilleuse-photographe est une idée en or : on se sent guidée, rassurée, sublime. Je recommande les yeux fermés.",
     date: "Janvier 2026",
+    photo: img("photo-1524504388940-b1c1722653e1", 200, 200),
   },
   {
     name: "Camille Berthier",
@@ -215,6 +222,7 @@ export const REVIEWS: Review[] = [
     rating: 4.5,
     text: "Une expérience très douce, dans un lieu d'une élégance rare. Mon maquillage était raffiné. J'aurais aimé un peu plus de tenue en fin de soirée, mais le résultat était superbe.",
     date: "Décembre 2025",
+    photo: img("photo-1526510747491-58f928ec870f", 200, 200),
   },
   {
     name: "Jeanne-Alix Petit",
@@ -223,6 +231,43 @@ export const REVIEWS: Review[] = [
     rating: 5,
     text: "Le cours collectif entre copines fut une merveilleuse parenthèse. On a appris, ri, et chacune est repartie avec « son » regard. L'école du regard porte bien son nom.",
     date: "Novembre 2025",
+    photo: img("photo-1554151228-14d9def656e4", 200, 200),
+  },
+  {
+    name: "Margaux Lefèvre",
+    location: "Nantes",
+    prestation: "Le Rituel Mariée",
+    rating: 5,
+    text: "De l'essai au grand jour, tout était d'un calme, d'une élégance absolus. Camille a compris avant moi ce que je voulais. Sur mes photos, on lit la confiance. Un souvenir éternel.",
+    date: "Octobre 2025",
+    photo: img("photo-1567532939604-b6b5b0db2604", 200, 200),
+  },
+  {
+    name: "Inès Dubois",
+    location: "Paris",
+    prestation: "Le Rituel Self-Care",
+    rating: 5,
+    text: "Le lissage des sourcils au design est un art chez Maison Lumière. Rien d'artificiel, tout est mis en valeur avec une douceur folle. Je viens pour ça, je repars pour tout le reste.",
+    date: "Septembre 2025",
+    photo: img("photo-1573496359142-b8d87734a5a2", 200, 200),
+  },
+  {
+    name: "Hannah Cohen",
+    location: "Toulouse",
+    prestation: "L'École du Regard",
+    rating: 5,
+    text: "Offert pour mes 30 ans par mes sœurs, ce cours fut un bijou. La maquilleuse m'a appris à jouer avec ma carnation, pas contre elle. J'ai maintenant mon propre rituel du matin.",
+    date: "Août 2025",
+    photo: img("photo-1580489944761-15a19d654956", 200, 200),
+  },
+  {
+    name: "Philippine Royer",
+    location: "Paris",
+    prestation: "La Séance Photographie",
+    rating: 5,
+    text: "Une matinée hors du temps : maquillage, lumière, douceur. Les photos ont quelque chose de vrai que je n'avais jamais vu de moi. La maison Lumière porte très bien son nom.",
+    date: "Juillet 2025",
+    photo: img("photo-1595950653106-6c9ebd614d3a", 200, 200),
   },
 ];
 

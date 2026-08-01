@@ -64,7 +64,7 @@ export function ContactForm() {
         {sent ? (
           <motion.div
             key="done"
-            className="flex min-h-[420px] flex-col items-center justify-center gap-6 rounded-3xl border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F8D7DA_0%,#FAFAFA_60%)] p-10 text-center"
+            className="flex min-h-[420px] flex-col items-center justify-center gap-6 rounded-3xl border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F3E9E1_0%,#FAFAFA_60%)] p-10 text-center"
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}

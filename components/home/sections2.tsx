@@ -44,7 +44,7 @@ export function Histoire() {
             alt="Notre studio de beauté"
             ratio="aspect-[3/4]"
             sizes="(min-width: 1024px) 44vw, 90vw"
-            className="shadow-[0_50px_120px_-40px_rgba(192,132,151,0.5)]"
+            className="shadow-[0_50px_120px_-40px_rgba(196,168,130,0.5)]"
           />
           <div className="glass absolute -right-5 bottom-10 rounded-2xl px-6 py-5 md:-right-10">
             <p className="font-display text-3xl font-semibold text-deeprose">2013</p>
@@ -104,7 +104,7 @@ export function Histoire() {
 
 export function GalerieStrip() {
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_50%_100%,#F8D7DA_0%,#FAFAFA_60%)] py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_50%_100%,#F3E9E1_0%,#FAFAFA_60%)] py-24 md:py-32">
       <div className="mx-auto max-w-[1440px] px-6 md:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
@@ -177,7 +177,7 @@ export function GalerieStrip() {
           <BeforeAfter
             before={AVANT_APRES.before}
             after={AVANT_APRES.after}
-            className="mx-auto max-w-md shadow-[0_50px_120px_-40px_rgba(192,132,151,0.55)] lg:max-w-none"
+            className="mx-auto max-w-md shadow-[0_50px_120px_-40px_rgba(196,168,130,0.55)] lg:max-w-none"
           />
         </Reveal>
       </div>
@@ -249,8 +249,8 @@ export function InstagramBand() {
 export function AvisFeatured() {
   const review = REVIEWS[0];
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(100%_90%_at_90%_10%,#E8B4BC_0%,#F8D7DA_45%,#FAFAFA_100%)] py-24 md:py-36">
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_left,rgba(212,175,55,0.14),transparent_70%)]" />
+    <section className="relative overflow-hidden bg-[radial-gradient(100%_90%_at_90%_10%,#E8DED4_0%,#F3E9E1_45%,#FAFAFA_100%)] py-24 md:py-36">
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_left,rgba(201,169,110,0.14),transparent_70%)]" />
 
       <div className="relative mx-auto flex max-w-[1000px] flex-col items-center gap-10 px-6 text-center md:px-10">
         <Reveal>

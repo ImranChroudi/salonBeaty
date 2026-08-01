@@ -11,7 +11,8 @@ import {
 import { Magnetic, Reveal } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
 import { FAQS } from "@/lib/data";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "FAQ",
@@ -59,7 +60,7 @@ export default function FaqPage() {
             ))}
           </Accordion>
 
-          <Reveal className="mt-14 flex flex-col items-center gap-5 rounded-3xl border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F8D7DA_0%,#FAFAFA_60%)] p-10 text-center">
+          <Reveal className="mt-14 flex flex-col items-center gap-5 rounded-3xl border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F3E9E1_0%,#FAFAFA_60%)] p-10 text-center">
             <p className="font-display text-2xl font-medium text-noir">
               Une autre question ?
             </p>

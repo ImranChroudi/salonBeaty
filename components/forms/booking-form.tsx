@@ -105,7 +105,7 @@ export function BookingForm() {
   if (confirmed) {
     return (
       <motion.div
-        className="flex min-h-[560px] flex-col items-center justify-center gap-7 rounded-[2rem] border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F8D7DA_0%,#FAFAFA_60%)] p-10 text-center"
+        className="flex min-h-[560px] flex-col items-center justify-center gap-7 rounded-[2rem] border border-gold/40 bg-[radial-gradient(120%_120%_at_50%_0%,#F3E9E1_0%,#FAFAFA_60%)] p-10 text-center"
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: EASE }}
@@ -113,7 +113,7 @@ export function BookingForm() {
       >
         <motion.span
           aria-hidden
-          className="grid h-20 w-16 place-items-center overflow-hidden rounded-t-[50%] border border-gold bg-cream/70 shadow-[0_20px_50px_-20px_rgba(212,175,55,0.8)]"
+          className="grid h-20 w-16 place-items-center overflow-hidden rounded-t-[50%] border border-gold bg-cream/70 shadow-[0_20px_50px_-20px_rgba(201,169,110,0.8)]"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8, ease: EASE }}
@@ -214,7 +214,7 @@ export function BookingForm() {
                       className={cn(
                         "group flex w-full items-center gap-5 rounded-2xl border p-5 text-left transition-all duration-400",
                         active
-                          ? "border-gold bg-gradient-to-r from-gold/10 to-transparent shadow-[0_20px_50px_-30px_rgba(212,175,55,0.6)]"
+                          ? "border-gold bg-gradient-to-r from-gold/10 to-transparent shadow-[0_20px_50px_-30px_rgba(201,169,110,0.6)]"
                           : "border-border bg-white hover:border-gold/50"
                       )}
                     >
@@ -368,8 +368,8 @@ export function BookingForm() {
       </div>
 
       <aside className="lg:sticky lg:top-28 lg:self-start">
-        <div className="overflow-hidden rounded-3xl border border-border bg-white shadow-[0_40px_100px_-50px_rgba(192,132,151,0.55)]">
-          <div className="border-b border-border bg-[radial-gradient(120%_120%_at_50%_0%,#F8D7DA_0%,#FAFAFA_70%)] px-7 py-6">
+        <div className="overflow-hidden rounded-3xl border border-border bg-white shadow-[0_40px_100px_-50px_rgba(196,168,130,0.55)]">
+          <div className="border-b border-border bg-[radial-gradient(120%_120%_at_50%_0%,#F3E9E1_0%,#FAFAFA_70%)] px-7 py-6">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-deep">
               Votre séance
             </p>

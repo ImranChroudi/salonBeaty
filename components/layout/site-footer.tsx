@@ -6,7 +6,7 @@ import { PRESTATIONS } from "@/lib/data";
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-noir text-cream">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_20%_0%,rgba(192,132,151,0.18),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_20%_0%,rgba(196,168,130,0.18),transparent_70%)]" />
       <div className="pointer-events-none absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full border border-gold/10" />
 
       <div className="relative mx-auto max-w-[1440px] px-6 pb-12 pt-20 md:px-10">

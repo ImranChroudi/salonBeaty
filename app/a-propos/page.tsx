@@ -10,7 +10,8 @@ import {
   WordReveal,
 } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "À propos",
@@ -94,7 +95,7 @@ export default function AProposPage() {
         lead="Chaque visage a sa lumière ; notre métier est de la trouver, de la caresser et de la faire durer. C'est la seule méthode de la maison, inchangée depuis 2013."
       />
 
-      <section className="relative overflow-hidden bg-[radial-gradient(100%_90%_at_10%_100%,#F8D7DA_0%,#FAFAFA_60%)] py-24 md:py-32">
+      <section className="relative overflow-hidden bg-[radial-gradient(100%_90%_at_10%_100%,#F3E9E1_0%,#FAFAFA_60%)] py-24 md:py-32">
         <div className="mx-auto max-w-[1200px] px-6 md:px-10">
           <Eyebrow>Nos engagements</Eyebrow>
           <h2 className="mt-6 max-w-2xl font-display text-[clamp(2.1rem,4.6vw,3.4rem)] font-medium leading-[1.06] text-noir">

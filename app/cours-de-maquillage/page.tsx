@@ -7,7 +7,8 @@ import { ProcessSteps } from "@/components/blocks/process-steps";
 import { Magnetic, Reveal, WordReveal } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
 import { ARTISTS, COURS_FORMULES, COURS_STEPS } from "@/lib/data";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Cours de Maquillage",
@@ -57,7 +58,7 @@ export default function CoursPage() {
             {COURS_FORMULES.map((f, i) => (
               <article
                 key={f.name}
-                className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-white transition-all duration-500 hover:border-gold/50 hover:shadow-[0_40px_90px_-35px_rgba(192,132,151,0.5)]"
+                className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-white transition-all duration-500 hover:border-gold/50 hover:shadow-[0_40px_90px_-35px_rgba(196,168,130,0.5)]"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <div className="flex items-center justify-between border-b border-border bg-powder/30 px-7 py-5">
@@ -113,7 +114,7 @@ export default function CoursPage() {
         steps={COURS_STEPS}
       />
 
-      <section className="relative overflow-hidden bg-[radial-gradient(110%_90%_at_90%_10%,#F8D7DA_0%,#FAFAFA_60%)] py-24 md:py-32">
+      <section className="relative overflow-hidden bg-[radial-gradient(110%_90%_at_90%_10%,#F3E9E1_0%,#FAFAFA_60%)] py-24 md:py-32">
         <div className="mx-auto grid max-w-[1100px] items-center gap-12 px-6 md:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <Reveal>
             <div className="relative mx-auto w-full max-w-sm">

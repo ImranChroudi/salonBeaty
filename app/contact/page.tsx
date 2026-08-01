@@ -3,7 +3,8 @@ import { CtaBand } from "@/components/blocks/cta-band";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Eyebrow, Reveal, WordReveal } from "@/components/motion/primitives";
 import { SITE } from "@/lib/site";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Contact",
@@ -144,7 +145,7 @@ export default function ContactPage() {
       <section className="relative bg-cream pb-24 md:pb-32">
         <div className="mx-auto max-w-[1200px] px-6 md:px-10">
           <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-border shadow-[0_40px_100px_-50px_rgba(192,132,151,0.5)]">
+            <div className="relative overflow-hidden rounded-3xl border border-border shadow-[0_40px_100px_-50px_rgba(196,168,130,0.5)]">
               <iframe
                 title="Localisation de Maison Lumière — 24 rue de la Paix, Paris"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=2.3262%2C48.8665%2C2.3362%2C48.8705&layer=mapnik&marker=48.8683%2C2.3312"

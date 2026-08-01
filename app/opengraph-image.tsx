@@ -17,8 +17,8 @@ export default function OpengraphImage() {
           alignItems: "center",
           justifyContent: "center",
           background:
-            "radial-gradient(120% 120% at 50% 0%, #F8D7DA 0%, #E8B4BC 55%, #C08497 100%)",
-          color: "#1E1E1E",
+            "radial-gradient(120% 120% at 50% 0%, #F3E9E1 0%, #E8DED4 55%, #C4A882 100%)",
+          color: "#2C2624",
           fontFamily: "Georgia, 'Times New Roman', serif",
           position: "relative",
         }}
@@ -27,7 +27,7 @@ export default function OpengraphImage() {
           style={{
             position: "absolute",
             inset: 24,
-            border: "1px solid rgba(212,175,55,0.55)",
+            border: "1px solid rgba(201,169,110,0.55)",
             borderRadius: "50% 50% 0 0 / 30% 30% 0 0",
           }}
         />
@@ -43,7 +43,7 @@ export default function OpengraphImage() {
             style={{
               width: 56,
               height: 44,
-              border: "2px solid #D4AF37",
+              border: "2px solid #C9A96E",
               borderRadius: "50% 50% 0 0",
               display: "flex",
               alignItems: "center",
@@ -51,7 +51,7 @@ export default function OpengraphImage() {
               fontSize: 30,
               fontWeight: 600,
               fontStyle: "italic",
-              color: "#1E1E1E",
+              color: "#2C2624",
             }}
           >
             M
@@ -60,7 +60,7 @@ export default function OpengraphImage() {
             <span style={{ fontSize: 44, fontWeight: 600, letterSpacing: 1 }}>
               Maison Lumière
             </span>
-            <span style={{ fontSize: 15, letterSpacing: 8, color: "#1E1E1E", opacity: 0.7 }}>
+            <span style={{ fontSize: 15, letterSpacing: 8, color: "#2C2624", opacity: 0.7 }}>
               BEAUTÉ · PARIS
             </span>
           </div>
@@ -81,7 +81,7 @@ export default function OpengraphImage() {
             fontSize: 20,
             marginTop: 28,
             letterSpacing: 3,
-            color: "#1E1E1E",
+            color: "#2C2624",
             opacity: 0.75,
           }}
         >

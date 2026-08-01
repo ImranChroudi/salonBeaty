@@ -35,7 +35,7 @@ export function WordReveal({
   delay = 0,
   stagger = 0.035,
   once = true,
-  amount = 0.5,
+  amount = 0.15,
 }: {
   text: string;
   className?: string;
@@ -55,7 +55,7 @@ export function WordReveal({
               className="inline-block will-change-transform"
               initial={{ y: "115%", rotate: 3 }}
               whileInView={{ y: "0%", rotate: 0 }}
-              viewport={{ once, amount }}
+              viewport={{ once, amount, margin: "-60px" }}
               transition={{ duration: 0.9, delay: delay + i * stagger, ease: EASE }}
             >
               {word}
@@ -79,7 +79,7 @@ export function Reveal({
   y = 36,
   blur = false,
   once = true,
-  amount = 0.2,
+  amount = 0.1,
   ...props
 }: HTMLMotionProps<"div"> & {
   delay?: number;
@@ -93,7 +93,7 @@ export function Reveal({
       className={className}
       initial={{ opacity: 0, y, filter: blur ? "blur(12px)" : "blur(0px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once, amount }}
+      viewport={{ once, amount, margin: "-40px" }}
       transition={{ duration: 0.95, delay, ease: EASE }}
       {...props}
     >

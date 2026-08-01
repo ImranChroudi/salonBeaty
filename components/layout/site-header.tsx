@@ -152,7 +152,7 @@ export function SiteHeader() {
             aria-modal="true"
             aria-label="Menu principal"
             tabIndex={-1}
-            className="fixed inset-0 z-[110] flex flex-col overflow-y-auto bg-[radial-gradient(130%_130%_at_85%_0%,#F8D7DA_0%,#F3CCD0_48%,#EED9DC_100%)]"
+            className="fixed inset-0 z-[110] flex flex-col overflow-y-auto bg-[radial-gradient(130%_130%_at_85%_0%,#F3E9E1_0%,#E8DED4_48%,#EDE3DA_100%)]"
             initial={{ clipPath: "circle(0% at calc(100% - 56px) 42px)" }}
             animate={{ clipPath: "circle(150% at calc(100% - 56px) 42px)" }}
             exit={{ clipPath: "circle(0% at calc(100% - 56px) 42px)" }}

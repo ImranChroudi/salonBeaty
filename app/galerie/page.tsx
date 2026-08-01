@@ -1,7 +1,8 @@
 import { PageHero } from "@/components/blocks/page-hero";
 import { CtaBand } from "@/components/blocks/cta-band";
 import { GalleryBeforeAfter, GalleryGrid } from "@/components/galerie/gallery-grid";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Galerie",
@@ -33,7 +34,7 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_50%_0%,#F8D7DA_0%,#FAFAFA_60%)] py-24 md:py-32">
+      <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_50%_0%,#F3E9E1_0%,#FAFAFA_60%)] py-24 md:py-32">
         <GalleryBeforeAfter />
       </section>
 

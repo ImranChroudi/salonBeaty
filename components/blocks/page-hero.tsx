@@ -35,7 +35,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-[radial-gradient(120%_90%_at_80%_0%,#F8D7DA_0%,#FBEFF0_45%,#FAFAFA_100%)]",
+        "relative overflow-hidden bg-[radial-gradient(120%_90%_at_80%_0%,#F3E9E1_0%,#F5EDE7_45%,#FAFAFA_100%)]",
         className
       )}
     >
@@ -91,13 +91,13 @@ export function PageHero({
           transition={{ duration: 1.2, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
-          <div className="pointer-events-none absolute -inset-8 rounded-[50%] bg-[radial-gradient(circle,rgba(212,175,55,0.16),transparent_70%)] blur-2xl" />
+          <div className="pointer-events-none absolute -inset-8 rounded-[50%] bg-[radial-gradient(circle,rgba(201,169,110,0.16),transparent_70%)] blur-2xl" />
           <ArchImage
             src={image}
             alt={alt}
             ratio="aspect-[4/5]"
             sizes="(min-width: 1024px) 40vw, 90vw"
-            className="shadow-[0_50px_120px_-40px_rgba(192,132,151,0.55)]"
+            className="shadow-[0_50px_120px_-40px_rgba(196,168,130,0.55)]"
           />
           {variant === "split" && (
             <span

@@ -6,7 +6,8 @@ import { ArtistsBand } from "@/components/home/sections";
 import { Magnetic, Reveal } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
 import { ARTISTS } from "@/lib/data";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Notre Équipe",
@@ -49,7 +50,7 @@ export default function EquipePage() {
         />
       </div>
 
-      <section className="relative overflow-hidden bg-[radial-gradient(110%_100%_at_50%_100%,#F8D7DA_0%,#FAFAFA_60%)] py-24 md:py-32">
+      <section className="relative overflow-hidden bg-[radial-gradient(110%_100%_at_50%_100%,#F3E9E1_0%,#FAFAFA_60%)] py-24 md:py-32">
         <div className="mx-auto flex max-w-[800px] flex-col items-center gap-8 px-6 text-center md:px-10">
           <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep">
             Rejoignez-nous

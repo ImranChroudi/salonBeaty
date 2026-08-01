@@ -11,7 +11,8 @@ import {
   WordReveal,
 } from "@/components/motion/primitives";
 import { Button } from "@/components/ui/button";
-import { JsonLd, buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { buildMetadata, schemaBreadcrumb, schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 
 export const metadata = buildMetadata({
   title: "Prestations",
@@ -73,7 +74,7 @@ export default function PrestationsPage() {
         showCta={false}
       />
 
-      <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_80%_0%,#E8B4BC_0%,#F8D7DA_40%,#FAFAFA_100%)] py-24 md:py-32">
+      <section className="relative overflow-hidden bg-[radial-gradient(120%_100%_at_80%_0%,#E8DED4_0%,#F3E9E1_40%,#FAFAFA_100%)] py-24 md:py-32">
         <div className="mx-auto max-w-[1100px] px-6 md:px-10">
           <div className="flex flex-col items-start gap-6">
             <Eyebrow>En détail</Eyebrow>
@@ -106,7 +107,7 @@ export default function PrestationsPage() {
                     alt={d.alt}
                     ratio="aspect-[4/3]"
                     sizes="(min-width: 768px) 46vw, 90vw"
-                    className="shadow-[0_40px_100px_-40px_rgba(192,132,151,0.55)]"
+                    className="shadow-[0_40px_100px_-40px_rgba(196,168,130,0.55)]"
                   />
                 </div>
               </Reveal>

@@ -13,7 +13,8 @@ import {
   InstagramBand,
 } from "@/components/home/sections2";
 import { CtaBand } from "@/components/blocks/cta-band";
-import { JsonLd, schemaPage } from "@/lib/site";
+import { schemaPage } from "@/lib/site";
+import { JsonLd } from "@/components/jsonld";
 import { ARTISTS } from "@/lib/data";
 
 export default function HomePage() {

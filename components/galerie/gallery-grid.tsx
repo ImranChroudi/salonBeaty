@@ -207,7 +207,7 @@ export function GalleryBeforeAfter() {
       <BeforeAfter
         before={AVANT_APRES.before}
         after={AVANT_APRES.after}
-        className="shadow-[0_50px_120px_-40px_rgba(192,132,151,0.55)]"
+        className="shadow-[0_50px_120px_-40px_rgba(196,168,130,0.55)]"
       />
     </div>
   );

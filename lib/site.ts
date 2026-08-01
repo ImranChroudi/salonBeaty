@@ -7,6 +7,9 @@ export const SITE = {
   description:
     "Atelier de maquillage & beauté de luxe à Paris. Maquillage mariée, maquillage professionnel, cours de maquillage et rituels de beauté par des artistes d'exception. Chaque détail est pensé pour sublimer votre élégance.",
   phone: "+33 1 42 66 00 00",
+  phoneHref: "+33142660000",
+  whatsapp: "+33142660000",
+  whatsappDisplay: "+33 1 42 66 00 00",
   email: "bonjour@maison-lumiere.fr",
   address: {
     streetAddress: "24 Rue de la Paix",
@@ -51,6 +54,13 @@ export const NAV_SECONDARY: NavItem[] = [
 
 export const NAV_ALL = [...NAV_PRIMARY, ...NAV_SECONDARY];
 
+export function waLink(message?: string) {
+  const text = message
+    ? encodeURIComponent(message)
+    : encodeURIComponent("Bonjour Maison Lumière, je souhaite prendre rendez-vous.");
+  return `https://wa.me/${SITE.whatsapp}?text=${text}`;
+}
+
 const defaults: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
@@ -79,6 +89,14 @@ const defaults: Metadata = {
     title: `${SITE.name} — Beauté de Luxe à Paris`,
     description: SITE.description,
     url: SITE.url,
+    images: [
+      {
+        url: `${SITE.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: `${SITE.name} — Beauté de Luxe à Paris`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -201,13 +219,4 @@ export function schemaBreadcrumb(path: string, items: { name: string }[]) {
     "@type": "BreadcrumbList",
     itemListElement: list,
   };
-}
-
-export function JsonLd({ data }: { data: unknown }) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
 }

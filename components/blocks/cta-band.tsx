@@ -24,7 +24,7 @@ export function CtaBand({
 }) {
   return (
     <section className="relative overflow-hidden bg-noir text-cream">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_70%_100%,rgba(192,132,151,0.28),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_70%_100%,rgba(196,168,130,0.28),transparent_70%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
 
       <div className="relative mx-auto grid max-w-[1440px] gap-16 px-6 py-24 md:px-10 lg:grid-cols-2 lg:items-center lg:gap-24 lg:py-32">

@@ -93,7 +93,7 @@ export function ProcessSteps({
                       alt={step.title}
                       ratio="aspect-[4/3]"
                       sizes="(min-width: 1024px) 38vw, 90vw"
-                      className="max-w-md shadow-[0_40px_100px_-40px_rgba(192,132,151,0.5)] lg:max-w-none"
+                      className="max-w-md shadow-[0_40px_100px_-40px_rgba(196,168,130,0.5)] lg:max-w-none"
                     />
                   </Reveal>
                 </div>
